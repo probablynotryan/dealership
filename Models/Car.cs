@@ -12,12 +12,16 @@ namespace Dealership.Models
       _price = price;
       _miles = miles;
     }
+    public static string MakeSound(string sound)
+    {
+      return "Our cars sound like " + sound; 
+    }
 
     public void SetPrice(int newPrice)
     {
       _price = newPrice;
     }
-    
+
     public string GetMakeModel()
     {
       return _makeModel;

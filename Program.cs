@@ -14,6 +14,10 @@ namespace Dealership
         Car chevy = new Car("1910 Chevy Model QuestionMark", 50, 14823);
         
         List<Car> Cars = new List<Car>() { volvo, yugo, ford, chevy };
+        
+        volvo.SetPrice(500);
+        //Car.MakeSound("Vroom");
+        Console.WriteLine(Car.MakeSound("Vroom!"));
 
         Console.WriteLine("Enter maximum price: ");
         string stringMaxPrice = Console.ReadLine();
@@ -35,6 +39,7 @@ namespace Dealership
           Console.WriteLine(automobile.GetMakeModel());
           Console.WriteLine(automobile.GetMiles() + " miles");
           Console.WriteLine("$"+automobile.GetPrice());
+
         }
       }
     }

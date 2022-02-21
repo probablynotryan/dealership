@@ -3,15 +3,18 @@ namespace Dealership.Models
   public class Car
   {
     private string _makeModel;
-    private int _price;
+    private double _price;
     private int _miles;
+    private int _horsepower;
 
-    public Car(string makeModel, int price, int miles)
+    public Car(string makeModel, double price, int miles, int horsepower)
     {
       _makeModel = makeModel;
-      _price = price;
+      _price = price *(.2);
       _miles = miles;
+      _horsepower = horsepower;
     }
+    
     public static string MakeSound(string sound)
     {
       return "Car goes " + sound; 
@@ -22,19 +25,52 @@ namespace Dealership.Models
       _price = newPrice;
     }
 
-    public string GetMakeModel()
+    public string MakeModel
     {
+      get
+      {
       return _makeModel;
+      }
+      set
+      {
+        _makeModel = value;
+      }
     }
 
-    public int GetPrice()
+    public int HorsePower
     {
+      get
+      {
+      return _horsepower;
+      }
+      set
+      {
+        _horsepower = value;
+      }
+    }
+
+    public double Price
+    {
+      get
+      {
       return _price;
+      }
+      set
+      {
+        _price = value;
+      }
     }
 
-    public int GetMiles()
+    public int Miles
     {
+      get
+      {
       return _miles;
+      }
+      set
+      {
+        _miles = value;
+      }
     }
 
     public bool WorthBuying(int maxPrice)

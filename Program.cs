@@ -8,10 +8,10 @@ namespace Dealership
     {
       public static void Main()
       {
-        Car volvo = new Car("2012 Volvo Thundergrumbles", 1100, 290134, 420); 
-        Car yugo = new Car("1980 Yogo Koral", 700, 56000, 250);
-        Car ford = new Car("1988 Ford Country Squire",1400,239001, 100);
-        Car chevy = new Car("1910 Chevy Model QuestionMark", 50, 14823, 2);
+        Car volvo = new Car(2012, "Volvo Thundergrumbles", 1100, 290134, 420); 
+        Car yugo = new Car(1980, "Yogo Koral", 700, 56000, 250);
+        Car ford = new Car(1988, "Ford Country Squire",1400,239001, 100);
+        Car chevy = new Car(1910, "Chevy Model QuestionMark", 50, 14823, 2);
         
         List<Car> Cars = new List<Car>() { volvo, yugo, ford, chevy };
         
@@ -39,6 +39,8 @@ namespace Dealership
           Console.WriteLine(automobile.Miles + " miles");
           Console.WriteLine("$"+automobile.Price);
           Console.WriteLine(automobile.HorsePower + " HP");
+          Console.WriteLine(Car.CheckHorsePower(automobile.HorsePower));
+          Console.WriteLine(Car.ResaleByYear(automobile.Year));
         }
       }
     }

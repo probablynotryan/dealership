@@ -12,6 +12,12 @@ namespace Dealership.Models
       _price = price;
       _miles = miles;
     }
+
+    public void SetPrice(int newPrice)
+    {
+      _price = newPrice;
+    }
+    
     public string GetMakeModel()
     {
       return _makeModel;
@@ -26,7 +32,7 @@ namespace Dealership.Models
     {
       return _miles;
     }
-    
+
     public bool WorthBuying(int maxPrice)
     {
       return (_price <= maxPrice);
